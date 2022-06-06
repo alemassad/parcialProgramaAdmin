@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+    <h2>Cabecera</h2>
+  </header>
+  
+  <section>
+    <nav>
+      <ul>
+        <li><a href="#">London</a></li>
+        <li><a href="#">Paris</a></li>
+        <li><a href="#">Tokyo</a></li>
+      </ul>
+    </nav>
+    
+    <article>
+    <form action="" class="formulario">
+        <h1 class="formularioTitulo">Contactame</h1>
+        <small id="errorNombre" class="errorNombre" hidden>Introducir un Nombre correcto</small>
+        <input type="text" name="" id="nombre" onblur="verificarNombre(this)" class="formularioInput">
+        <label for="" class="formularioLabel ">Nombres</label>
+        
+        <small id="errorCorreo" class="errorCorreo" hidden>Introducir un Correo correcto</small>
+        <input type="text" name="" id="correo" onblur="verificarCorreo(this)" class="formularioInput">
+        <label for="" class="formularioLabel ">Correo</label>
+        
+        <small id="errorTelefono" class="errorTelefono" hidden>Introducir un Teléfono numérico</small>
+        <input type="text" name="" class="formularioInput" onblur="verificarTelefono(this)" id="telefono">
+        <label for="" class="formularioLabel ">Telefono</label>
+        
+        
+        <textarea class="textareaInput" id="mensaje"></textarea>
+        <label for="" class="formularioLabelMensaje ">Mensaje</label>
+        
+        <input type="submit" value="Mandar" class="formularioSubmit" onclick="validar()">
+
+    </form>
+    <script src="form.js"></script>
+    </article>
+    </section>
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

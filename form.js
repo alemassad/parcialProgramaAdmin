@@ -15,6 +15,22 @@ function verificarNombre(dato){
         verde("nombre");
     } 
 }    
+function verificarApellido(dato){
+    var apellido= (dato.value);
+    if(apellido.length<3||apellido.length==""){
+        document.getElementById("errorApellido").style.display ="block";
+        rojo("apellido");              
+        console.log("ingrese un Apellido valido "+(apellido));
+        document.getElementById("errorAoellido").style.display ="block";
+        rojo("apellido");        
+    }else if(!isNaN(apellido)){
+        document.getElementById("errorApellido").style.display ="block";
+        rojo("apelldio");        
+    }else{
+        document.getElementById("errorApellido").style.display="none";
+        verde("apellido");
+    } 
+}    
 function verificarCorreo(dato){
     var correo= dato.value;
     if(!correo.includes("@")){

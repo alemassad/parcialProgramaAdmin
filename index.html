@@ -28,19 +28,38 @@
     <article>
     <form action="" class="formulario">
         <h1 class="formularioTitulo">Contactame</h1>
+
         <small id="errorNombre" class="errorNombre" hidden>Introducir un Nombre correcto</small>
         <input type="text" name="" id="nombre" onblur="verificarNombre(this)" class="formularioInput">
         <label for="" class="formularioLabel ">Nombres</label>
+
+        <small id="errorApellido" class="errorApellido" hidden>Poner un Apellido correcto</small>
+        <input type="text" name="" id="apellido" onblur="verificarApellido(this)" class="formularioInput">
+        <label for="" class="formularioLabel ">Apellido</label>
         
         <small id="errorCorreo" class="errorCorreo" hidden>Introducir un Correo correcto</small>
         <input type="text" name="" id="correo" onblur="verificarCorreo(this)" class="formularioInput">
         <label for="" class="formularioLabel ">Correo</label>
         
-        <small id="errorTelefono" class="errorTelefono" hidden>Introducir un Teléfono numérico</small>
-        <input type="text" name="" class="formularioInput" onblur="verificarTelefono(this)" id="telefono">
-        <label for="" class="formularioLabel ">Telefono</label>
+        <small id="errorEdad" class="errorEdad" hidden>Introducir una Edad válida</small>
+        <input type="text" name="" class="formularioInput" onblur="verificarEdad(this)" id="edad">
+        <label for="" class="formularioLabel ">Edad</label>
         
-        
+        <div class="divSexo">      
+        <p>Sexo :</p>
+        <input type="radio" name="sexo" class="" value="H" checked/>Hombre
+        <input type="radio" name="sexo" class="" value="M"/>Mujer
+        <input type="radio" name="sexo" class="" value="O"/>Otre
+        </div>  
+        <div class="divSexo">
+        <p>Temas de Interés: </p>
+        <input type="checkbox" name="deporte" id="deporte"/>Deporte
+        <input type="checkbox" name="musica" id="musica"/>Música
+        <input type="checkbox" name="juegos" id="juegos"/>Juegos
+        <input type="checkbox" name="tecnologia" id="tecnologia"/>Tecnología
+        <input type="checkbox" name="otros" id="otros"/>Otros
+
+        </div>
         <textarea class="textareaInput" id="mensaje"></textarea>
         <label for="" class="formularioLabelMensaje ">Mensaje</label>
         

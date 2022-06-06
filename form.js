@@ -46,16 +46,20 @@ function verificarCorreo(dato){
         verde("correo");
     }
 }    
-function verificarTelefono(dato){
-    var telefono= dato.value;
-    console.log(telefono);
-    if(!parseInt(telefono)){
-        console.log("ingrese un telefono con números, "+telefono.toUpperCase()+" no es válido");
-        document.getElementById("errorTelefono").style.display = "block";
-        rojo("telefono");
-    }else{
-        document.getElementById("errorTelefono").style.display ="none";
-        verde("telefono");
+function verificarEdad(dato){
+    var edad= dato.value;
+    console.log(edad);
+    if(!parseInt(edad)){
+        console.log("ingrese una Edad con números, "+edad.toUpperCase()+" no es válido");
+        document.getElementById("errorEdad").style.display = "block";
+        rojo("edad");
+    }else if (edad<0 || edad>99){
+        console.log("ingrese una Edad entre 0 y 100 años ,"+edad.toUpperCase()+" no es válido");
+        document.getElementById("errorEdad").style.display = "block";
+        rojo("edad");  
+    }else{        
+        document.getElementById("errorEdad").style.display ="none";
+        verde("edad");
     }
 }   
 function verificarCheck(){

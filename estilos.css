@@ -50,6 +50,16 @@ footer {
       height: auto;      
     }
 }
+.form2{
+    width: 500px;
+    max-width: 100%;
+    margin:initial;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0 0 20px 1px rgba(116, 17, 230, 0.7);
+    position: relative;
+
+}
 .formulario{        
     width: 500px;
     max-width: 100%;
@@ -64,12 +74,13 @@ footer {
     margin-top: 0;
     color: rgba(0,0,0,0.7);
 }
-.formularioInput, .divSexo, .formularioLabel, .formularioLabelMensaje, .formularioSubmit, .textareaInput{
+.formularioInput, .divSexo, .divPais, .formularioLabel, .divInteres
+    .formularioLabelMensaje, .formularioSubmit, .textareaInput{
     display: block;
     width: 100%;
     font-size: 1.3em;    
 }
-.formularioInput, .textareaInput, .divSexo{
+.formularioInput, .textareaInput, .divSexo, .divPais, .divInteres{
     padding: 15px;
     border: 1px solid rgba(0,0,0,0.3);
     margin-bottom: 40px;
@@ -95,7 +106,7 @@ footer {
 .formularioLabelMensaje{
     padding-left: 15px;
     position: absolute;  
-    margin-top: -125px;  
+    margin-top: -115px;  
     z-index: -20;
     color: rgba(0,0,0,0.5);
     transition: all 0.2s;

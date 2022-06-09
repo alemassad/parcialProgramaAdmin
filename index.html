@@ -1,76 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  
     <title>Examen de programacion</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <header>
-    <h2>Cabecera</h2>
-  </header>
+        <h2>Cabecera</h2>
+    </header>
   
-  <section>
-    <nav>
-      <ul>
-        <li><a href="#">Uno</a></li>
-        <li><a href="#">Dos</a></li>
-        <li><a href="#">Tes</a></li>
-        <li><a href="#">Cuatro</a></li>
-        <li><a href="#">Cinco</a></li>
-        <li><a href="#">Seis</a></li>
-      </ul>
-    </nav>
-    
-    <article>
-    <form action="" class="formulario">
-        <h1 class="formularioTitulo">Contactame</h1>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Uno</a></li>
+                <li><a href="#">Dos</a></li>
+                <li><a href="#">Tes</a></li>
+                <li><a href="#">Cuatro</a></li>
+                <li><a href="#">Cinco</a></li>
+                <li><a href="#">Seis</a></li>
+            </ul>
+        </nav>    
+        <article>
+            <form action="" id ="formulario"  class="formulario">
+                <h1 class="formularioTitulo">Contactame</h1>
 
-        <small id="errorNombre" class="errorNombre" hidden>Introducir un Nombre correcto</small>
-        <input type="text" name="" id="nombre" onblur="verificarNombre(this)" class="formularioInput">
-        <label for="" class="formularioLabel ">Nombres</label>
+                <small id="errorNombre" class="errorNombre" hidden>Introducir un Nombre correcto</small>
+                <input type="text" name="" id="nombre" onblur="verificarNombre(this)" class="formularioInput">
+                <label for="" class="formularioLabel ">Nombres</label>
 
-        <small id="errorApellido" class="errorApellido" hidden>Poner un Apellido correcto</small>
-        <input type="text" name="" id="apellido" onblur="verificarApellido(this)" class="formularioInput">
-        <label for="" class="formularioLabel ">Apellido</label>
-        
-        <small id="errorCorreo" class="errorCorreo" hidden>Introducir un Correo correcto</small>
-        <input type="text" name="" id="correo" onblur="verificarCorreo(this)" class="formularioInput">
-        <label for="" class="formularioLabel ">Correo</label>
-        
-        <small id="errorEdad" class="errorEdad" hidden>Introducir una Edad válida</small>
-        <input type="text" name="" class="formularioInput" onblur="verificarEdad(this)" id="edad">
-        <label for="" class="formularioLabel ">Edad</label>
-        
-        <div class="divSexo">      
-        <p>Sexo :</p>
-        <input type="radio" name="sexo" class="" value="H" checked/>Hombre
-        <input type="radio" name="sexo" class="" value="M"/>Mujer
-        <input type="radio" name="sexo" class="" value="O"/>Otre
-        </div>  
-        <div class="divSexo">
-        <p>Temas de Interés: </p>
-        <input type="checkbox" name="deporte" id="deporte"/>Deporte
-        <input type="checkbox" name="musica" id="musica"/>Música
-        <input type="checkbox" name="juegos" id="juegos"/>Juegos
-        <input type="checkbox" name="tecnologia" id="tecnologia"/>Tecnología
-        <input type="checkbox" name="otros" id="otros"/>Otros
+                <small id="errorApellido" class="errorApellido" hidden>Poner un Apellido correcto</small>
+                <input type="text" name="" id="apellido" onblur="verificarApellido(this)" class="formularioInput">
+                <label for="" class="formularioLabel ">Apellido</label>
+                
+                <small id="errorCorreo" class="errorCorreo" hidden>Introducir un Correo correcto</small>
+                <input type="text" name="" id="correo" onblur="verificarCorreo(this)" class="formularioInput">
+                <label for="" class="formularioLabel ">Correo</label>
+                
+                <small id="errorEdad" class="errorEdad" hidden>Introducir una Edad válida</small>
+                <input type="text" name="" class="formularioInput" onblur="verificarEdad(this)" id="edad">
+                <label for="" class="formularioLabel ">Edad</label>
+                
+                <div class="divSexo" id="divSexo" onblur="texTarea()">      
+                    <p>Sexo :</p>
+                    <input type="radio" name="sexo" id="hombre" onclick="mostrarSexo(this)" value="H" checked/>Hombre
+                    <input type="radio" name="sexo" id="mujer" onclick="mostrarSexo(this)" value="M"/>Mujer
+                    <input type="radio" name="sexo" id="otre" onclick="mostrarSexo(this)" value="O"/>Otre
+                </div>  
+                <div class="divInteres" id="divInteres">
+                    <p>Temas de Interés: </p>
+                    <input type="checkbox" name="deporte" id="deporte" onclick="verificarCheck(this)"/>Deporte
+                    <input type="checkbox" name="musica" id="musica" onclick="verificarCheck(this)"/>Música
+                    <input type="checkbox" name="juegos" id="juegos" onclick="verificarCheck(this)"/>Juegos
+                    <input type="checkbox" name="tecnologia" id="tecnologia" onclick="verificarCheck(this)"/>Tecnología
+                    <input type="checkbox" name="otros" id="otros" onclick="verificarCheck(this)"/>Otros
+                </div>
+                <div class="divPais" id="divPais">
+                    <select name="paices" id="paices">
+                        <option value="0" onclick="verificarPais(this)" >Menú Paices</option>
+                        <option value="Agentina" onclick="verificarPais(this)">Argentina</option>
+                        <option value="Chile" onclick="verificarPais(this)">Chile</option>
+                        <option value="Brasil" onclick="verificarPais(this)">Brasil</option>
+                        <option value="Uruguay" onclick="verificarPais(this)">Uruguay</option>
+                    </select>
+                </div>
 
-        </div>
-        <textarea class="textareaInput" id="mensaje"></textarea>
-        <label for="" class="formularioLabelMensaje ">Mensaje</label>
-        
-        <input type="submit" value="Mandar" class="formularioSubmit" onclick="validar()">
+                <textarea class="textareaInput" id="mensaje" maxlength="100" onblur="textTarea()"></textarea>
+                <label for="" class="formularioLabelMensaje ">Comentarios</label>
+                
+                <input type="submit" value="Validar" class="formularioSubmit">
 
-    </form>
-    <script src="form.js"></script>
-    </article>
+            </form>
+            <form action="" class="form2" id="form2" hidden>
+                <h2>resultado :</h2>
+                <h3 id="nombre2"></h3>
+                <br>
+                <h3 id="apellido2"></h3>
+                <br>
+                <h3 id="correo2"></h3>
+                <br>
+                <h3 id="edad2"></h3>
+                <br>
+                <h3 id="sexo2"></h3>
+                <br>
+                <h3 id="interes2"></h3>
+                <br>
+                <h3 id="pais2"></h3>
+                <br>
+            </form>
+            <script src="form.js"></script>
+        </article>
     </section>
     <footer>
-        <p>Pata</p>
+        <p>Pié de página</p>
     </footer>
 </body>
 </html>

@@ -12,7 +12,8 @@
   
     <section>
         <nav>
-            <ul>
+            <a href=""class=logo></a>
+            <ul class="navList">
                 <li><a href="#">Uno</a></li>
                 <li><a href="#">Dos</a></li>
                 <li><a href="#">Tes</a></li>
@@ -65,14 +66,14 @@
                     </select>
                 </div>
 
-                <textarea class="textareaInput" id="mensaje" maxlength="100" onblur="textTarea()"></textarea>
+                <textarea class="textareaInput" id="mensaje2" maxlength="100" onblur="textTarea()"></textarea>
                 <label for="" class="formularioLabelMensaje ">Comentarios</label>
                 
                 <input type="submit" value="Validar" class="formularioSubmit">
 
             </form>
             <form action="" class="form2" id="form2" hidden>
-                <h2>resultado :</h2>
+                <h2>Resultado :</h2>
                 <h3 id="nombre2"></h3>
                 <br>
                 <h3 id="apellido2"></h3>
@@ -87,6 +88,9 @@
                 <br>
                 <h3 id="pais2"></h3>
                 <br>
+                <h3 id="textArea2"></h3>
+                <br>
+                <input type="button" onclick="cerrar()" value="Cerrar" class="btnFormulario2">
             </form>
             <script src="form.js"></script>
         </article>

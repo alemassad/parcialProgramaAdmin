@@ -1,3 +1,4 @@
+formulario.reset();
 var nombreValido="";
 var apellidoValido="";
 var correoValido="";
@@ -5,7 +6,8 @@ var edadValido="";
 var sexoValido="";
 var interesValido="";
 var paisValido="";
-function verificarNombre(dato){
+var textAreaValido="";
+function verificarNombre(){
     var nombre= document.getElementById("nombre").value;
     if(nombre.length<3||nombre.length==""){
         document.getElementById("errorNombre").style.display ="block";
@@ -26,7 +28,7 @@ function verificarNombre(dato){
         return true;
     } 
 }    
-function verificarApellido(dato){
+function verificarApellido(){
     var apellido= document.getElementById("apellido").value;
     if(apellido.length<3||apellido.length==""){
         document.getElementById("errorApellido").style.display ="block";
@@ -47,7 +49,7 @@ function verificarApellido(dato){
         return true;
     } 
 }    
-function verificarCorreo(dato){
+function verificarCorreo(){
     var correo= document.getElementById("correo").value;
     var regexEmail= /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
     if(!regexEmail.test(correo)){
@@ -78,7 +80,7 @@ function verificarCorreo(dato){
     } */
 }   
 
-function verificarEdad(dato){
+function verificarEdad(){
     var edad= document.getElementById("edad").value;
 
     if(!parseInt(edad)){
@@ -135,7 +137,7 @@ function mostrarSexo(){
         verde("divSexo");
     }
 }
-function verificarPais(dato){
+function verificarPais(){
     var datoPais= document.getElementById("paices").value;   
     if(datoPais=="0"){
         console.log("select pais: "+datoPais);
@@ -149,7 +151,11 @@ function verificarPais(dato){
     }
 }
 function textTarea(){
-    document.getElementById("mensaje").style.background = "rgb(157, 230, 188, 0.7)";
+    document.getElementById("mensaje2").style.background = "rgb(157, 230, 188, 0.7)";
+    var textarea= document.getElementById("mensaje2").value;
+    console.log("Dentro de mensaje"+ textarea);
+    textAreaValido=" "+textarea;
+
 }
 
 function rojo(e){
@@ -159,41 +165,29 @@ function verde(e){
     document.getElementById(e).style.background = "rgb(157, 230, 188, 0.7)";
 }
 
-/* function validar(){
-    console.log("fuera del if "+nombreValido);
- if (verificarApellido()){
-        console.log("dentro de los trues valudos");
-        return true;
-
-    }else{
-        console.log("fuera de los trues falsos");
-        e.preventDefault();
-        return false;
-    } 
-} */
 var form = document.getElementById("formulario");
 form.addEventListener('submit',function(evt){
     evt.preventDefault();
     if (verificarApellido() && verificarNombre() && verificarCorreo() 
-    && verificarEdad() && verificarPais() ){
-       
+    && verificarEdad() && verificarPais() ){       
         
         document.getElementById("form2").style.display = "block";
         var nombre2=document.getElementById("nombre2");
-        nombre2.innerHTML= nombreValido;
+        nombre2.innerHTML= "Nombre: "+nombreValido;
         var apellido2=document.getElementById("apellido2");
-        apellido2.innerHTML= apellidoValido;
+        apellido2.innerHTML= "Apellido: "+apellidoValido;
         var correo2=document.getElementById("correo2");
-        correo2.innerHTML= correoValido;
+        correo2.innerHTML= "Correo: "+correoValido;
         var edad2=document.getElementById("edad2");
-        edad2.innerHTML= edadValido;
+        edad2.innerHTML= "Edad: "+edadValido;
         var sexo2=document.getElementById("sexo2");
-        sexo2.innerHTML= sexoValido;
+        sexo2.innerHTML="Gènero: "+sexoValido;
         var interes2=document.getElementById("interes2");
-        interes2.innerHTML= interesValido;
+        interes2.innerHTML= "Intereses: "+interesValido;
         var pais2=document.getElementById("pais2");
-        pais2.innerHTML= paisValido;
-        
+        pais2.innerHTML= "Paices: "+paisValido;  
+        var textArea2=document.getElementById("textArea2");
+        textArea2.innerHTML= "Comentarios: "+textAreaValido;     
 
         return true;
     }else{
@@ -202,3 +196,7 @@ form.addEventListener('submit',function(evt){
         return false;
     }
 });
+function cerrar(){
+    document.getElementById("form2").style.display ="none";
+    formulario.reset();
+}

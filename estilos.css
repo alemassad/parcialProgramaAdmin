@@ -6,7 +6,7 @@ body{
     font-family: sans-serif, Arial, Helvetica, sans-serif;;
 }
 header {
-    background-color: #666;
+    background-color: rgb(138, 153, 218);
     padding: 30px;
     text-align: center;
     font-size: 35px;
@@ -14,15 +14,16 @@ header {
 }
 nav {
     float: left;
-    width: 20%;
+    width: 100%;
     height: 100%; 
-    background: rgb(223, 238, 245);
+    background: rgb(11, 93, 131);
     padding: 20px;
 }  
-
 nav ul{
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: space-around;
 }  
 article {
     float: left;
@@ -30,7 +31,7 @@ article {
     width: 70%;    
     height: 100%; 
 }  
-/* Clear floats after the columns */
+
 section::after {
     content: "";
     display: flex;
@@ -42,8 +43,7 @@ footer {
     text-align: center;
     color: white;
     
-}  
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+}
 @media (max-width: 600px) {
     nav, article {
       width: 100%;
@@ -53,7 +53,7 @@ footer {
 .form2{
     width: 500px;
     max-width: 100%;
-    margin:initial;
+    margin:auto;
     margin-top: 30px;
     padding: 20px;
     box-shadow: 0 0 20px 1px rgba(116, 17, 230, 0.7);
@@ -118,7 +118,6 @@ footer {
     border: none;
     cursor: pointer;
 }
-
-.fijar{
-    margin-top: -135px;
+h3{
+    font-size: x-small;
 }
